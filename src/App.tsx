@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {Heading} from './components/Heading'
+import {Item} from './components/Item'
+import {Input} from './components/Input'
+import {Stats} from './components/Stats'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <div style={{width: 560}}>
+            <Heading />
+            <Stats />
+            <Item
+                label="Example label"
+                complete
+                onClick={() => {}}
+            />
+            <Item
+                label="Example label"
+                complete={false}
+                onClick={() => {}}
+            />
+            <Item
+                label="Example label"
+                complete={false}
+                onClick={() => {}}
+            />
+            <Item
+                label="Example label"
+                complete={false}
+                onClick={() => {}}
+            />
+            <Input
+                onSubmit={(label) => {
+                    console.log('New item', label)
+                }}
+            />
+        </div>
+    )
 }
 
-export default App;
+export default App

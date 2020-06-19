@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Container as ItemContainer, TextStyle as ItemTextStyle} from './Item'
+import {
+    Container as ItemContainer,
+    TextStyle as ItemTextStyle,
+} from './Item'
 
 const InsertInput = styled.input`
     width: 100%;
@@ -18,11 +21,7 @@ const InsertInput = styled.input`
     }
 `
 
-type InputProps = {
-    onSubmit: (value: string) => void
-}
-
-export const Input: React.FC<InputProps> = ({onSubmit}) => {
+export const Input: React.FC = () => {
     return (
         <ItemContainer>
             <InsertInput
@@ -30,9 +29,13 @@ export const Input: React.FC<InputProps> = ({onSubmit}) => {
                 type="search"
                 autoComplete="off"
                 onKeyUp={async ({keyCode, currentTarget}) => {
-                    if (keyCode !== 13) return
-                    onSubmit(currentTarget.value)
-                    currentTarget.value = ''
+                    if (keyCode === 13) {
+                        console.log(
+                            'New todo:',
+                            currentTarget.value,
+                        )
+                        currentTarget.value = ''
+                    }
                 }}
             />
         </ItemContainer>

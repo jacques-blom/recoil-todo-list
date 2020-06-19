@@ -5,7 +5,7 @@ import {Card} from './Card'
 
 export const TextStyle = css`
     font-size: 17px;
-    color: white;
+    color: ${(props) => props.theme.text};
     font-family: inherit;
 `
 
@@ -22,11 +22,12 @@ const Check = styled.div<{checked: boolean}>`
     width: 20px;
     height: 20px;
     margin-right: 15px;
-    transition: 0.1s all ease-in-out;
+    transition: 0.2s all ease-in-out;
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: #3f464c;
+    background-color: ${(props) => props.theme.background};
+    cursor: pointer;
 
     ${(props) =>
         props.checked &&
@@ -50,7 +51,7 @@ const Strikethrough = styled.div<{checked: boolean}>`
     left: -3px;
     right: -3px;
     height: 2px;
-    background-color: white;
+    background-color: ${(props) => props.theme.text};
     border-radius: 2px;
     transform: scaleX(0);
     transform-origin: center left;

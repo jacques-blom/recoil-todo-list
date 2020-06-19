@@ -1,40 +1,37 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {Heading} from './components/Heading'
-import {Item} from './components/Item'
 import {Input} from './components/Input'
 import {Stats} from './components/Stats'
+import {Items} from './Items'
+import {Switch} from './components/Switch'
+import {ThemeProvider, GlobalStyles} from './components/theme'
+import {Header} from './components/Header'
+
+const Home = () => {
+    const [darkMode, setDarkMode] = useState(true)
+
+    return (
+        <div style={{width: 560}}>
+            <Header>
+                <Heading />
+                <Switch
+                    value={darkMode}
+                    onChange={setDarkMode}
+                />
+            </Header>
+            <Stats />
+            <Items />
+            <Input />
+        </div>
+    )
+}
 
 const App = () => {
     return (
-        <div style={{width: 560}}>
-            <Heading />
-            <Stats />
-            <Item
-                label="Example label"
-                complete
-                onClick={() => {}}
-            />
-            <Item
-                label="Example label"
-                complete={false}
-                onClick={() => {}}
-            />
-            <Item
-                label="Example label"
-                complete={false}
-                onClick={() => {}}
-            />
-            <Item
-                label="Example label"
-                complete={false}
-                onClick={() => {}}
-            />
-            <Input
-                onSubmit={(label) => {
-                    console.log('New item', label)
-                }}
-            />
-        </div>
+        <ThemeProvider darkMode={true}>
+            <GlobalStyles />
+            <Home />
+        </ThemeProvider>
     )
 }
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import {Card} from './Card'
-import {colors} from './colors'
 import styled from 'styled-components'
 
 const StatContainer = styled.div`
@@ -8,6 +7,7 @@ const StatContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: ${(props) => props.theme.text};
 `
 
 const StatValue = styled.div`
@@ -36,7 +36,7 @@ const Stat: React.FC<{label: string; value: string}> = ({
 const Divider = styled.div`
     width: 1px;
     height: 42px;
-    background-color: ${colors.lightGray};
+    background-color: ${(props) => props.theme.text};
     opacity: 0.3;
 `
 

@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import {
-    Container as ItemContainer,
-    TextStyle as ItemTextStyle,
-} from './Item'
+    Container as TaskContainer,
+    TextStyle as TaskTextStyle,
+} from './Task'
 
 const InsertInput = styled.input`
     width: 100%;
@@ -13,7 +13,7 @@ const InsertInput = styled.input`
     background-color: transparent;
     outline: none;
     -webkit-appearance: textfield;
-    ${ItemTextStyle};
+    ${TaskTextStyle};
 
     ::-webkit-search-decoration,
     ::-webkit-search-cancel-button {
@@ -25,9 +25,9 @@ export const Input: React.FC = () => {
     const [label, setLabel] = useState('')
 
     return (
-        <ItemContainer>
+        <TaskContainer>
             <InsertInput
-                placeholder="Insert a new todo item..."
+                placeholder="Insert a new task..."
                 type="search"
                 autoComplete="off"
                 value={label}
@@ -41,6 +41,6 @@ export const Input: React.FC = () => {
                     }
                 }}
             />
-        </ItemContainer>
+        </TaskContainer>
     )
 }

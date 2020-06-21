@@ -1,7 +1,7 @@
 import React from 'react'
 import {Input} from './components/Input'
 import {Stats} from './components/Stats'
-import {Items} from './Items'
+import {Tasks} from './components/Tasks'
 import {ThemeProvider, GlobalStyles} from './components/theme'
 import {Header} from './components/Header'
 
@@ -10,7 +10,7 @@ const Home = () => {
         <div style={{width: 560}}>
             <Header />
             <Stats />
-            <Items />
+            <Tasks />
             <Input />
         </div>
     )

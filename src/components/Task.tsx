@@ -64,9 +64,9 @@ const Strikethrough = styled.div<{checked: boolean}>`
         `};
 `
 
-type ItemProps = {}
+type TaskProps = {}
 
-export const Item: React.FC<ItemProps> = () => {
+export const Task: React.FC<TaskProps> = () => {
     const complete = false
     const label = 'Example label'
 

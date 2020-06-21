@@ -39,10 +39,7 @@ type SwitchProps = {
     onChange: (value: boolean) => void
 }
 
-export const Switch: React.FC<SwitchProps> = ({
-    value: on,
-    onChange,
-}) => (
+export const Switch: React.FC<SwitchProps> = ({value: on, onChange}) => (
     <Container onClick={() => onChange(!on)}>
         <Toggle
             style={{

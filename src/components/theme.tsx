@@ -19,8 +19,7 @@ export const colors = {
 
 export const GlobalStyles = createGlobalStyle`
     body {
-        background-color: ${(props: any) =>
-            props.theme.background};
+        background-color: ${(props: any) => props.theme.background};
         color: ${(props: any) => props.theme.text};
         display: flex;
         flex-direction: column;
@@ -46,9 +45,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     children,
 }) => {
     return (
-        <StyledThemeProvider
-            theme={darkMode ? colors.dark : colors.light}
-        >
+        <StyledThemeProvider theme={darkMode ? colors.dark : colors.light}>
             {children}
         </StyledThemeProvider>
     )

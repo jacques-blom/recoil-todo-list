@@ -1,9 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import {
-    Container as TaskContainer,
-    TextStyle as TaskTextStyle,
-} from './Task'
+import {Container as TaskContainer, TextStyle as TaskTextStyle} from './Task'
 
 const InsertInput = styled.input`
     width: 100%;

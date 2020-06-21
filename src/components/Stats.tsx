@@ -21,10 +21,7 @@ const StatLabel = styled.div`
     text-transform: uppercase;
 `
 
-const Stat: React.FC<{label: string; value: string}> = ({
-    label,
-    value,
-}) => {
+const Stat: React.FC<{label: string; value: string}> = ({label, value}) => {
     return (
         <StatContainer>
             <StatValue>{value}</StatValue>

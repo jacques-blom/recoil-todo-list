@@ -64,19 +64,18 @@ const Strikethrough = styled.div<{checked: boolean}>`
         `};
 `
 
-type ItemProps = {
-    complete: boolean
-    label: string
-    onClick: () => void
-}
+type ItemProps = {}
 
-export const Item: React.FC<ItemProps> = ({
-    label,
-    complete,
-    onClick,
-}) => {
+export const Item: React.FC<ItemProps> = () => {
+    const complete = false
+    const label = 'Example label'
+
     return (
-        <Container onClick={onClick}>
+        <Container
+            onClick={() => {
+                // Toggle completed
+            }}
+        >
             <Check checked={complete}>
                 <CheckIcon
                     src={checkIconSvg}

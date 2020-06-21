@@ -52,8 +52,6 @@ export const Stats: React.FC = () => {
             <Stat label="Tasks Complete" value="1" />
             <Divider />
             <Stat label="Tasks Remaining" value="3" />
-            <Divider />
-            <Stat label="Time Remaining" value="2h" />
         </Container>
     )
 }

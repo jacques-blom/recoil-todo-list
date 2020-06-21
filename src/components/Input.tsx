@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import {
     Container as ItemContainer,
@@ -22,19 +22,22 @@ const InsertInput = styled.input`
 `
 
 export const Input: React.FC = () => {
+    const [label, setLabel] = useState('')
+
     return (
         <ItemContainer>
             <InsertInput
                 placeholder="Insert a new todo item..."
                 type="search"
                 autoComplete="off"
-                onKeyUp={async ({keyCode, currentTarget}) => {
+                value={label}
+                onChange={({currentTarget}) => {
+                    setLabel(currentTarget.value)
+                }}
+                onKeyUp={({keyCode}) => {
                     if (keyCode === 13) {
-                        console.log(
-                            'New todo:',
-                            currentTarget.value,
-                        )
-                        currentTarget.value = ''
+                        // Insert new task
+                        setLabel('')
                     }
                 }}
             />

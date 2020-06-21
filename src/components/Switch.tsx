@@ -17,7 +17,7 @@ const Toggle = styled.div`
     height: 22px;
     border-radius: 50%;
     background-color: #ffc207;
-    transition: 0.2s transform ease-out;
+    transition: 0.2s all ease-out;
     position: relative;
 `
 
@@ -31,7 +31,7 @@ const MoonOverlay = styled.div`
     border-radius: 50%;
     background-color: ${(props) => props.theme.card};
     transform-origin: left center;
-    transition: 0.2s transform ease-out;
+    transition: 0.2s all ease-out;
 `
 
 type SwitchProps = {

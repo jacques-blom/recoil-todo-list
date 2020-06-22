@@ -2,17 +2,17 @@ import React from 'react'
 import {Input} from './components/Input'
 import {Stats} from './components/Stats'
 import {Tasks} from './components/Tasks'
-import {ThemeProvider, GlobalStyles} from './components/theme'
+import {ThemeProvider, GlobalStyles, Page} from './components/theme'
 import {Header} from './components/Header'
 
 const Home = () => {
     return (
-        <div style={{width: 560}}>
+        <Page>
             <Header />
             <Stats />
             <Tasks />
             <Input />
-        </div>
+        </Page>
     )
 }
 

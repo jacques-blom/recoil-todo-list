@@ -1,5 +1,5 @@
 import React from 'react'
-import {
+import styled, {
     ThemeProvider as StyledThemeProvider,
     createGlobalStyle,
 } from 'styled-components'
@@ -33,6 +33,10 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
     }
 
+    #root {
+        width: 100vw;
+    }
+
     * {
         transition: 0.2s color ease-in-out, 0.2s background-color ease-in-out;
     }
@@ -50,3 +54,11 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         </StyledThemeProvider>
     )
 }
+
+export const Page = styled.div`
+    width: 100%;
+    max-width: 560px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+`

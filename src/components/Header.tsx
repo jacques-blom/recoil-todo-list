@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {Heading} from './Heading'
 import {Switch} from './Switch'
+import {atom, useRecoilState} from 'recoil'
 
 const Container = styled.div`
     display: flex;
@@ -11,8 +12,13 @@ const Container = styled.div`
     padding: 30px 0;
 `
 
+export const darkModeState = atom({
+    key: 'darkMode',
+    default: true,
+})
+
 export const Header: React.FC = () => {
-    const [darkMode, setDarkMode] = useState(true)
+    const [darkMode, setDarkMode] = useRecoilState(darkModeState)
 
     return (
         <Container>

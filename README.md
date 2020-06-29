@@ -20,6 +20,10 @@ yarn
 yarn start
 ```
 
+## Any questions?
+
+File an issue or reach out to me on Twitter ([@jacques_codes](https://twitter.com/jacques_codes)). I'd be more than happy to help!
+
 ## Completed code
 
 If you want the completed code (as it would be at the end of the tutorial), check out the [completed branch](https://github.com/jacques-blom/recoil-example-app/tree/completed).
